@@ -1,60 +1,68 @@
+//index.html
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bite Delight - Food Delivery</title>
-  <link rel="stylesheet" href="page.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity=
+"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		crossorigin="anonymous">
+
+	<script src="dolist.js"></script>
+
+	<title>To Do List</title>
 </head>
+
 <body>
-  <header class="header">
-    <div class="container">
-      <a href="#" class="logo">Bite Delight</a>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">How it Works</a></li>
-          <li><a href="#">App</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+	<header class="bg-success text-white p-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<font face="Comic sans MS"
+						size="11" color="black">
+						<strong>ToDo List</strong>
+					</font>
+					
+				</div>
+			</div>
+		</div>
+	</header>
 
-  <main class="hero">
-    <div class="container">
-      <div class="hero-text">
-        <h1>Craving Delicious Food?</h1>
-        <p>Get it delivered to your doorstep in minutes!</p>
-        <button class="btn">Order Now</button>
-      </div>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtcGpLxdvu_mf1lvGVcE7rAJ61SHF_vYSNdA&s"alt="step on delivery">
-      </main>
-  <section class="benefits">
-    <div class="container">
-      <h2>Why Choose Bite Delight?</h2>
-      <div class="benefit-card">
-        <img src="https://png.pngtree.com/png-vector/20230507/ourmid/pngtree-fast-delivery-label-design-vector-png-image_7087605.png"ALT="Fast delivery ">
-        <h3>Fast Delivery</h3>
-        <p>Get your food piping hot and fresh in no time.</p>
-      </div>
-      <div class="benefit-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGKLATBBSU7eyI_qMg_CnRKvrMrz0oBhrrsQ&s" alt="Wide variety ">
-        <h3>Wide Variety</h3>
-        <p>Order from a vast selection of restaurants and cuisines.</p>
-      </div>
-      <div class="benefit-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT81gw-2ao3KwLR7zCnrZoFec--HqWlw6oOYA&s"alt="Easy ordering ">
-        <h3>Easy Ordering</h3>
-        <p>Our app makes ordering a breeze, just a few taps away.</p>
-      </div>
-    </div>
-  </section>
+	<div class="container mt-3">
+		<h2>Add Items</h2>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; AKASH MARKETING DELITE. All reservrights ed.</p>
-    </div>
-  </footer>
+		<label id="lblsuccess" class="text-success"
+				style="display: none;">
+		</label>
+		
+		<form id="addForm">
+			<div class="row">
+				<div class="col-lg-7 col-md-7 col-sm-7">
+
+					<input type="text" onkeyup=
+						"toggleButton(this, 'submit')"
+						class="form-control" id="item">
+				</div>
+
+				<div class="col-lg-5 col-md-5 col-sm-5">
+				<input type="submit" class="btn btn-dark"
+						id="submit" value="Submit" disabled>
+				</div>
+			</div>
+		</form>
+
+		<h3 class="mt-4">Tasks</h3>
+
+		<form id="addForm">
+			<ul class="list-group" id="items"></ul>
+		</form>
+	</div>
 </body>
-  </html>
+
+</html>
